@@ -71,7 +71,7 @@ model = LogisticModel()
 
 # step3 construct loss function and optimizer
 criterion = nn.BCELoss(size_average=True)  # inherit nn.module
-optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
+optimizer = torch.optim.SGD(model.parameters(), lr=0.1)
 
 # step4 Training cycle [mini-batch]
 if __name__ == '__main__':

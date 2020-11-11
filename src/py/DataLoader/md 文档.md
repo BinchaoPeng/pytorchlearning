@@ -101,7 +101,7 @@ dataset = DiabetesDataset()
 
 train_loader = DataLoader(dataset=dataset,
                           batch_size=32,
-                          shuffle=True, # 随机打乱数据读取
+                          shuffle=True, # 随机打乱数据读取.测试集中一般设置false，观察结果好
                           num_workers=2) # 多线程数目读取数据
 for epoch in range(100):
 	for i,data in enumerate(train_loader,0):

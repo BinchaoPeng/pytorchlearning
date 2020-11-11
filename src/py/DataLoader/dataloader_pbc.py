@@ -1,9 +1,11 @@
 import torch
+import torch.nn as nn
 import numpy as np
 from torch.utils.data import Dataset
 from torch.utils.data import DataLoader
 
 
+# step1  prepare dataset
 class DiabetesDataset(Dataset):
     def __init__(self, filepath):
         """
@@ -43,7 +45,52 @@ train_loader = DataLoader(dataset=dataset,
                           shuffle=True,
                           num_workers=2)
 
+
+# step2 design model using Class
+class LogisticModel(nn.Module):
+    def __init__(self):
+        super(LogisticModel, self).__init__()
+        # construct linear model
+        # (8, 1) represents the dim of X and y
+        self.linear1 = nn.Linear(64, 32)
+        self.linear2 = nn.Linear(32, 16)
+        self.linear3 = nn.Linear(16, 4)
+        self.linear4 = nn.Linear(4, 1)
+        self.sigmoid = nn.Sigmoid()
+
+    def forward(self, x):
+        x = self.sigmoid(self.linear1(x))
+        x = self.sigmoid(self.linear2(x))
+        x = self.sigmoid(self.linear3(x))
+        x = self.sigmoid(self.linear4(x))
+        # the last x means your predicted value y_pred
+        return x
+
+
+model = LogisticModel()
+
+# step3 construct loss function and optimizer
+criterion = nn.BCELoss(size_average=True)  # inherit nn.module
+optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
+
+# step4 Training cycle [mini-batch]
 if __name__ == '__main__':
     for epoch in range(100):
+        """
+        0 represents the start index
+        data is a tuple (x,y),that is data = (X,y)
+        inputs is X
+        labels is y
+        """
         for i, data in enumerate(train_loader, 0):
-            pass
+            # 1.prepare data
+            inputs, labels = data
+            # 2.forward
+            y_pred = model(inputs)
+            loss = criterion(y_pred, labels)
+            print(epoch, i, loss.item())
+            # 3.backward
+            optimizer.zero_grad()
+            loss.backward()
+            # 4.update
+            optimizer.step()

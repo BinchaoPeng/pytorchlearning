@@ -20,6 +20,7 @@ y_data = torch.as_tensor(y_data, dtype=torch.float)
 class LinearModule(nn.Module):
     def __init__(self):
         super(LinearModule, self).__init__()
+        # the dim of X and y
         self.linear = nn.Linear(1, 1)
 
     def forward(self, x):

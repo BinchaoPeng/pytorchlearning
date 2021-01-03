@@ -25,6 +25,7 @@ class LinearModule(nn.Module):
 
     def forward(self, x):
         y_pred = F.sigmoid(self.linear(x))
+        print("data:", y_pred)
         return y_pred
 
 
@@ -49,6 +50,6 @@ print("w=", model.linear.weight.item())
 print("b=", model.linear.bias.item())
 
 # predict
-x_test = torch.Tensor([4])
+x_test = torch.Tensor([1])
 y_test = model(x_test)
 print("y_pred=", y_test.data.item())

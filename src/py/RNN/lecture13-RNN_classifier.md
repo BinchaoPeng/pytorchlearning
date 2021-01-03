@@ -88,6 +88,14 @@ getitem：拿出来的name是字符串，拿出来的country是索引
 
 ![image-20201121201843103](images/image-20201121201843103.png)
 
+<hr>
+
+转置
+
+![image-20210103092213234](images/image-20210103092213234.png)
+
+
+
 ![image-20201121202920148](images/image-20201121202920148.png)
 
 **embedding过程：**
@@ -113,6 +121,10 @@ bidirectional:双向还是单项循环网络
 
 
 pack up：要求排序
+
+![image-20210103092833603](images/image-20210103092833603.png)
+
+
 
 ![image-20201121203755960](images/image-20201121203755960.png)
 

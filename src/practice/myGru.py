@@ -17,6 +17,11 @@ hidden = torch.zeros(num_layers * n_direction, batch_size, hidden_size)
 
 out, hn = gru(input, hidden)
 
+if n_direction == 2:
+    hidden_cat = torch.cat([hn[-1], hn[-2]], dim=1)
+else:
+    hidden_cat = hidden[-1]
+
 print(gru.parameters())
 
 print("input:", input)
@@ -29,3 +34,5 @@ print("out:", out)
 print("out shape:", out.shape)
 print("hn:", hn)
 print("hn shape:", hn.shape)
+print("hidden_cat:", hidden_cat)
+print("hidden_cat shape:", hidden_cat.shape)

@@ -1,11 +1,11 @@
 import torch
 import torch.nn as nn
 
-batch_size = 3
+batch_size = 1
 seq_lens = 4
-input_size = 2
-hidden_size = 5
-num_layers = 5
+input_size = 125
+hidden_size = 125
+num_layers = 2
 bidirectional = True
 
 n_direction = 2 if bidirectional else 1
@@ -43,3 +43,5 @@ print("hidden_cat shape:", hidden_cat.shape)
 
 
 print(callable(gru))
+
+

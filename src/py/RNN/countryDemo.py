@@ -198,7 +198,7 @@ def trainModel(epoch):
 
         optimizer.step()
 
-        total_loss += loss
+        total_loss += loss.item
 
         if i % 10 == 0:
             print(f'[{time_since(start)}] Epoch {epoch} ', end='')

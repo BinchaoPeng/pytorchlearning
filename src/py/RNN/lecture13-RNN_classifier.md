@@ -164,6 +164,14 @@ pack up：要求排序
 
 ![image-20201121204446461](images/image-20201121204446461.png)
 
+```python 
+total_loss += loss.item()   # item()
+```
+
+
+
+
+
 
 
 ## test

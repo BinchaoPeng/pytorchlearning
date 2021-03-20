@@ -10,6 +10,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/src/practice/myBECLoss_base.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/src/practice/myCrossEntropyLoss.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/src/practice/myEmbeding.py">
           <value>
             <Attribute>
@@ -18,6 +32,13 @@
           </value>
         </entry>
         <entry key="/src/practice/myGru.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/src/practice/myNLLLoss.py">
           <value>
             <Attribute>
               <option name="separator" value="," />

@@ -55,7 +55,7 @@ class NameDataset(Dataset):
 
 # In[]: set paras when we need
 BATCH_SIZE = 512
-NUM_WORKS = 12
+NUM_WORKS = 4
 HIDDEN_SIZE = 100
 N_LAYER = 2
 N_CHARS = 128
@@ -128,7 +128,8 @@ class RNNClassifierNet(nn.Module):
             hidden_cat = hidden[-1]
 
         fc_output = self.fc(hidden_cat)
-
+        print(fc_output.shape)
+        print(fc_output[0])
         return fc_output
 
     def _init_hidden(self, batch_size):
@@ -198,7 +199,7 @@ def trainModel(epoch):
 
         optimizer.step()
 
-        total_loss += loss.item
+        total_loss += loss.item()
 
         if i % 10 == 0:
             print(f'[{time_since(start)}] Epoch {epoch} ', end='')

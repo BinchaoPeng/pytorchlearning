@@ -68,6 +68,8 @@ class Net(nn.Module):
         x = self.linear6(x)
         x = self.relu(x)
         x = self.linear7(x)
+        x = F.softmax(x)
+        print(x)
         return x
 
 
@@ -82,6 +84,7 @@ def train(epoch, train_loader):
     running_loss = 0
     iteration = 0
     for i, (x, y) in enumerate(train_loader, 0):
+        print(y, y.dtype)
         # forward===========>to get predict y
         y_pred = model.forward(x)
         # compute loss======================>use y_pred and y to get loss by criterion,that is loss function

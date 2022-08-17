@@ -3,56 +3,56 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="/src/practice/myBCELoss.py">
+        <entry key="/src/py/DataLoader/data/boston_house_prices.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/src/practice/myBECLoss_base.py">
+        <entry key="/src/py/DataLoader/data/breast_cancer.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/src/practice/myCrossEntropyLoss.py">
+        <entry key="/src/py/DataLoader/data/iris.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/src/practice/myEmbeding.py">
+        <entry key="/src/py/DataLoader/data/wine_data.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/src/practice/myGru.py">
+        <entry key="/src/py/MutiDimLogisticReg/data/boston_house_prices.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/src/practice/myNLLLoss.py">
+        <entry key="/src/py/MutiDimLogisticReg/data/breast_cancer.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/src/practice/myTransformerEncoder.py">
+        <entry key="/src/py/MutiDimLogisticReg/data/iris.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/src/practice/mygru-2.py">
+        <entry key="/src/py/MutiDimLogisticReg/data/wine_data.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

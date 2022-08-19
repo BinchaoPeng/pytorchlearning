@@ -68,7 +68,7 @@ class Net(nn.Module):
         x = self.linear6(x)
         x = self.relu(x)
         x = self.linear7(x)
-        x = F.softmax(x)
+        # x = F.softmax(x) // auto softmax in CE , not need.
         print(x)
         return x
 
